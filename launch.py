@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 
 WORK_DIRECTORY = os.getcwd() + "\\"
-load_dotenv(WORK_DIRECTORY + ".env")
+load_dotenv()
 
 
 def create_env_file(username, password):
@@ -16,10 +16,6 @@ def info():
     mqtt_password = input("Input MQTT password:")
     if mqtt_username and mqtt_password:
         create_env_file(mqtt_username, mqtt_password)
-
-    python_path = WORK_DIRECTORY + "Scripts\\"
-    print("\nPython Path for OBS scripts:")
-    print(python_path)
 
     schedule_run_command = "schtasks /create /sc ONLOGON /tn Autostreaming /tr " + "\"" + python_path + "pythonw.exe " \
                            + WORK_DIRECTORY + "client.py" + "\""
