@@ -7,8 +7,9 @@ load_dotenv()
 
 
 def create_env_file(username, password):
-    os.putenv("NAME", username)
-    os.putenv("PASSWORD", password)
+    with open(".env", "w") as f:
+        f.write("NAME=" + username)
+        f.write("PASSWORD=" + password)
 
 
 def info():
