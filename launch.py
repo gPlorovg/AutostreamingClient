@@ -18,7 +18,7 @@ def info():
     if mqtt_username and mqtt_password:
         create_env_file(mqtt_username, mqtt_password)
 
-    python_path = WORK_DIRECTORY + "Scripts\\"
+    python_path = WORK_DIRECTORY + "autostreaming-env\\" + "Scripts\\"
 
     schedule_run_command = "schtasks /create /sc ONLOGON /tn Autostreaming /tr " + "\"" + python_path + "pythonw.exe " \
                            + WORK_DIRECTORY + "client.py" + "\""
