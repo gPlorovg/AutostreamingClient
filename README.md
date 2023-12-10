@@ -23,13 +23,15 @@ python .\launch.py
 Input MQTT username:
 Input MQTT password:
 ```
-6. Сохранить команду (COMMAND)
+6. Сохранить данные
 ```
 Autorun command for Autostreaming client app:
-COMMAND
+DATA1
+Python Path:
+DATA2
 ```
 7. Запустить от имени Администратора powershell
-8. Ввести полученнию команду (COMMAND)
+8. Ввести полученнию команду (DATA1)
 ```
 УСПЕХ. Запланированная задача "Autostreaming" была успешно создана.
 ```
@@ -37,7 +39,7 @@ COMMAND
 ```
 pythonw.exe .\client.py
 ```
-10. В открывшемся окне OBS studio настроить Python интерпретатор
+10. В открывшемся окне OBS studio настроить Python интерпретатор - указать (DATA2)
 ```
 Сервис -> Скрипты -> Настройки Python
 ```
